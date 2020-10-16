@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace OOPIntro
 {
@@ -13,7 +14,23 @@ namespace OOPIntro
                 if (Console.ReadLine().ToLower() == "yes")
                 {
                     Console.WriteLine("What do you want to buy?");
-                    var product = new Product() { _productName = Console.ReadLine() };
+                    Console.WriteLine("1. coffee");
+                    Console.WriteLine("2. milk");
+                    Console.WriteLine("3. nocco");
+                    var choice = Console.ReadLine();
+                    if (choice == "1")
+                    {
+                        var coffee = new Coffee();
+                        kund._cart.Add(coffee);
+                    }
+                    if (choice == "2")
+                    {
+                        kund._cart.Add(milk);
+                    }
+                    if (choice == "3")
+                    {
+                        kund._cart.Add(nocco);
+                    }
                 }
                 else
                     break;
